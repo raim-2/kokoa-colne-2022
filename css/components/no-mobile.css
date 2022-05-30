@@ -4,6 +4,11 @@
 }
 
 @media screen and (min-width: 645px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
   #no-mobile {
     position: absolute;
     z-index: 99;
@@ -18,12 +23,7 @@
     font-size: 30px;
   }
 
-  body {
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .no-mobile__info {
+  .no-mobile__snoopy {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,36 +49,68 @@
     }
   }
 
-  .no-mobile__info img {
+  .no-mobile__snoopy img {
     position: absolute;
     width: 70px;
     height: 100px;
     top: -110px;
     right: 0px;
     cursor: pointer;
+    animation: snoopyWalk 2s steps(5, start) forwards infinite;
+    animation-delay: 2.5s;
   }
 
-  .no-mobile__info img:hover {
-    animation: snoopyWalk 3s ease-in-out forwards infinite;
-  }
-
-  .no-mobile__info-hover {
+  .no-mobile__snoopy-balloon {
     position: absolute;
     top: -90px;
     right: -70px;
     letter-spacing: 2px;
-    text-align: center;
     line-height: 12px;
     width: 70px;
     height: 40px;
+    text-align: center;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 600;
     background-color: white;
     border-radius: 10px;
     border-bottom-left-radius: 0;
     display: block;
     box-sizing: border-box;
     padding: 8px 0;
+  }
+
+  .no-mobile__snoopy-balloon:hover {
+    color: var(--pink);
+  }
+
+  .no-mobile__text {
+    width: 18.5ch;
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+  }
+
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+
+    30% {
+      color: var(--yellow);
+    }
+    60% {
+      color: var(--yellow);
+    }
+    100% {
+      width: 18.5ch;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 }
 
@@ -101,67 +133,4 @@
     height: 100vh;
     overflow: hidden;
   }
-} */
-
-/* .no-mobile__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-@keyframes snoopyWalk {
-  0% {
-    transform: none;
-  }
-  15% {
-    transform: translateX(-80px);
-  }
-  30% {
-    transform: translateX(-140px);
-  }
-  45% {
-    transform: translateX(-200px);
-  }
-  60% {
-    transform: translate(-200px, -50px);
-  }
-  75% {
-    transform: translate(-200px, 0px);
-  }
-  90% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: none;
-  }
-}
-
-.no-mobile__info img {
-  position: absolute;
-  width: 70px;
-  height: 100px;
-  top: -110px;
-  right: 0px;
-}
-
-.no-mobile__info img:hover {
-  animation: snoopyWalk 4.5s ease-in-out forwards;
-}
-
-.no-mobile__info-hover {
-  position: absolute;
-  top: -90px;
-  right: -70px;
-  letter-spacing: 2px;
-  text-align: center;
-  line-height: 18px;
-  width: 70px;
-  height: 40px;
-  font-size: 12px;
-  font-weight: 600;
-  background-color: var(--yellow);
-  border-radius: 10px;
-  border-bottom-left-radius: 0;
 } */
