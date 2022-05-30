@@ -1,7 +1,8 @@
 :root {
-  --pink: #ff5b92;
+  --pink: rgb(254, 99, 127);
   --horizontal-space: 25px;
   --main-border: 1px solid rgba(0, 0, 0, 0.2);
   --grey: rgba(0, 0, 0, 0.5);
   --yellow: #f6f6ab;
+  --deep-yellow: rgb(255, 221, 0);
 }

@@ -76,7 +76,7 @@
 }
 
 .open-post__member-status {
-  color: #ffb0e0;
+  color: var(--pink);
 }
 
 .open-post__photo img {

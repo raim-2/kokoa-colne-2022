@@ -7,8 +7,14 @@
 }
 
 .screen-header__title {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.screen-header__title:hover {
+  color: var(--pink);
 }
 
 .screen-header__icons span {
