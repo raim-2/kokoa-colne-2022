@@ -14,16 +14,76 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 30px;
   }
 
   body {
     height: 100vh;
     overflow: hidden;
   }
+
+  .no-mobile__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  @keyframes snoopyWalk {
+    0% {
+      transform: none;
+    }
+    25% {
+      transform: translateY(-50px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    75% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: none;
+    }
+  }
+
+  .no-mobile__info img {
+    position: absolute;
+    width: 70px;
+    height: 100px;
+    top: -110px;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  .no-mobile__info img:hover {
+    animation: snoopyWalk 3s ease-in-out forwards infinite;
+  }
+
+  .no-mobile__info-hover {
+    position: absolute;
+    top: -90px;
+    right: -70px;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 12px;
+    width: 70px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: white;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    display: block;
+    box-sizing: border-box;
+    padding: 8px 0;
+  }
 }
 
-@media screen and (max-width: 340px) {
+/* js 추가 후 나중에 구현*/
+/* @media screen and (max-width: 340px) {
   #no-mobile {
     position: absolute;
     z-index: 99;
@@ -41,9 +101,9 @@
     height: 100vh;
     overflow: hidden;
   }
-}
+} */
 
-.no-mobile__info {
+/* .no-mobile__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,4 +164,4 @@
   background-color: var(--yellow);
   border-radius: 10px;
   border-bottom-left-radius: 0;
-}
+} */
