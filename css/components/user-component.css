@@ -1,5 +1,6 @@
 .user-component {
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .user-component,
@@ -24,7 +25,7 @@
 .user-component__subtitle {
   margin-top: 8px;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgb(199, 199, 199);
 }
 
 .user-component__avatar--xl {
@@ -36,6 +37,8 @@
   width: 60px;
   height: 60px;
   border-radius: 25px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .user-component__title--not-bold {
@@ -52,4 +55,36 @@
 .user-component__time {
   margin-bottom: 7px;
   display: block;
+}
+
+/* @keyframes notificationBadge {
+  0% {
+    background-color: ;
+  }
+  30% {
+    background-color: var(--yellow);
+  }
+  60% {
+    background-color: var(--pink);
+  }
+  100% {
+    background-color: unset;
+  }
+} */
+
+@keyframes notificationBadge {
+  0% {
+    transform: none;
+  }
+  50% {
+    background-color: var(--yellow);
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.user-component__notification {
+  animation: notificationBadge 3s ease-in-out infinite;
 }

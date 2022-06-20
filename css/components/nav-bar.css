@@ -21,6 +21,7 @@
     transform: none;
   }
   50% {
+    background-color: var(--yellow);
     transform: translateY(-3px) rotateY(360deg);
   }
   100% {

@@ -31,7 +31,7 @@
     position: relative;
   }
 
-  @keyframes snoopyWalk {
+  @keyframes snoopyJump {
     0% {
       transform: none;
     }
@@ -56,7 +56,7 @@
     top: -110px;
     right: 0px;
     cursor: pointer;
-    animation: snoopyWalk 2s steps(5, start) forwards infinite;
+    animation: snoopyJump 2s steps(5, start) forwards infinite;
     animation-delay: 2.5s;
   }
 

@@ -11,6 +11,9 @@
   font-weight: 600;
   letter-spacing: 1px;
   font-family: "Luckiest Guy", cursive;
+  background: linear-gradient(to right, var(--pink), #e1e198);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .screen-header__title:hover {
